@@ -17,6 +17,11 @@ try:
         all_nodes = [line for line in decoded_data.splitlines() if line.strip()]
 
         filtered_nodes = []
+        filtered_nodes.append("""#profile-title: list.txt White List
+#profile-update-interval: 1
+#support-url: https://t.me/twen_two
+#profile-web-page-url: https://github.com
+#announce: t.me/twen_two · WhiteList configs · \n\n""")
         for line in all_nodes:
                 if "🇷🇺" in line or "White list" in line.lower():
                         filtered_nodes.append(line)
