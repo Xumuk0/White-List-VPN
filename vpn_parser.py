@@ -1,7 +1,7 @@
 import requests
 import base64
 
-SOURCE_URL = "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-1.txt"
+SOURCE_URL = "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt"
 
 try:
         response = requests.get(SOURCE_URL)
