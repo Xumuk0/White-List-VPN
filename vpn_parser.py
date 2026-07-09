@@ -21,7 +21,7 @@ try:
 #profile-update-interval: 1
 #support-url: https://t.me/twen_two
 #profile-web-page-url: https://github.com
-#announce: t.me/twen_two · WhiteList configs · \n\n""")
+#announce: t.me/twen_two · WhiteList configs · \n""")
         for line in all_nodes:
                 if "🇷🇺" in line or "White list" in line.lower():
                         filtered_nodes.append(line)
