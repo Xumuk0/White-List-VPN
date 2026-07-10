@@ -2,6 +2,7 @@ import requests
 import base64
 
 SOURCE_URL = "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt"
+words = ["🇷🇺", "White list", "Russia", "Россия", "RU"]
 
 try:
         response = requests.get(SOURCE_URL)
@@ -23,7 +24,7 @@ try:
 #profile-web-page-url: https://github.com
 #announce: t.me/twen_two · WhiteList configs · \n""")
         for line in all_nodes:
-                if "🇷🇺" in line or "White list" in line.lower():
+                if any(word in line for word in words):
                         filtered_nodes.append(line)
         
         result_text = "\n".join(filtered_nodes)
