@@ -2,10 +2,6 @@
 #profile-update-interval: 1
 #support-url: https://t.me/twen_two
 #profile-web-page-url: https://github.com
-<<<<<<< HEAD
-#announce: t.me/twen_two · WhiteList configs · 
-
-=======
 #announce: t.me/twen_two · WhiteList configs ·
 vless://c61ec320-29f1-4e00-9272-8b676e6957b4@89.169.39.55:443?security=reality&encryption=none&pbk=Lbug_wz0y9xgKeDK44D9kuUap0fXzNKyv_nMJxnZRzU&headerType=none&fp=qq&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=max.ru&sid=28a059440d3d5ba1#[332ms Россия RU 🇷🇺 @vlesstrojan]%20t.me%2Frjsxrd
 vless://c61ec320-29f1-4e00-9272-8b676e6957b4@89.169.39.55:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=qq&pbk=Lbug_wz0y9xgKeDK44D9kuUap0fXzNKyv_nMJxnZRzU&sid=08000000&sni=max.ru#0969 | 🇷🇺 Russia | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu%20t.me%2Frjsxrd
@@ -37,7 +33,6 @@ vless://3483aa7a-8a7d-4561-8f77-4fbf7a0b1033@5.188.115.226:9443?encryption=none&
 vless://4f166057-2f4c-43d8-b5b3-6eb4413022e1@201.51.12.164:8445?flow=xtls-rprx-vision&fp=firefox&pbk=EPrMDeBde65nLBoriu-4H_4-0D4Y1pLqH9m6aSys6D8&security=reality&sni=apple.com&type=raw#🇷🇺 Россия 11 | BWL, CS%20t.me%2Frjsxrd
 vless://a5ea9247-79f3-4655-aece-3fb51e1e669e@158.160.191.91:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=rezerv8.yunus.guru&fp=firefox&pbk=6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE&sid=34256b39b4ebb864&type=tcp&headerType=none #🇷🇺 [ Configs by DukeMehdi ] VL-RU%20t.me%2Frjsxrd
 vless://2ea1a3c8-2581-4ead-8291-43fee2f8be3d@62.60.228.89:443?security=reality&encryption=none&pbk=ydoxmw5pH_JPRTbjeNKnsF-MfVybjnAYLnhwRj3n3yE&headerType=none&fp=chrome&type=tcp&sni=api.ok.ru&sid=cf2d#AetrisVPN White list ┃ ✅ SNI: api.ok.ru ┃ 🇩🇪 Германия%20t.me%2Frjsxrd
->>>>>>> cb29f75 (v3.1)
 vless://54bfa3e3-d6b4-4a55-8db3-6fce58041fdb@87.228.101.57:443?flow=xtls-rprx-vision&encryption=none&type=raw&security=reality&fp=firefox&sni=api-maps.yandex.ru&pbk=kDGigLxn2RUJ8HqhPVUb8pRAcjn5zMhR0-QrORmbIDk&sid=be6abde66d48cd13&spx=%2F#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%E2%80%94%20%23250
 vless://54bfa3e3-d6b4-4a55-8db3-6fce58041fdb@87.228.101.57:443?flow=xtls-rprx-vision&encryption=none&type=raw&security=reality&fp=firefox&sni=5post-gate.x5.ru&pbk=kDGigLxn2RUJ8HqhPVUb8pRAcjn5zMhR0-QrORmbIDk&sid=be6abde66d48cd13&spx=%2F#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%E2%80%94%20%23258
 vless://54bfa3e3-d6b4-4a55-8db3-6fce58041fdb@87.228.101.211:443?flow=xtls-rprx-vision&encryption=none&type=raw&security=reality&fp=firefox&sni=5post-gate.x5.ru&pbk=kDGigLxn2RUJ8HqhPVUb8pRAcjn5zMhR0-QrORmbIDk&sid=be6abde66d48cd13&spx=%2F#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%E2%80%94%20%23270
