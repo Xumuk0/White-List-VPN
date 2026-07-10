@@ -23,40 +23,51 @@ def get_source_urls():
     return [str(SOURCE_URL).strip()]
 
 try:
-        source_urls = get_source_urls()
-        print(f"Используем источники: {source_urls}")
+    source_urls = get_source_urls()
+    print(f"Используем источники: {source_urls}")
 
-        for source_url in source_urls:
-            response = requests.get(source_url)
-            raw_data = response.text.strip()
+    filtered_nodes = [
+        "#profile-title: list.txt White List",
+        "#profile-update-interval: 1",
+        "#support-url: https://t.me/twen_two",
+        "#profile-web-page-url: https://github.com",
+        "#announce: t.me/twen_two · WhiteList configs ·",
+    ]
 
-            try:
-                decoded_data = base64.b64decode(raw_data).decode('utf-8')
-                is_base64 = True
-            except Exception:
-                decoded_data = raw_data
-                is_base64 = False
-                                                                
-            all_nodes = [line for line in decoded_data.splitlines() if line.strip()]
+    any_base64 = False
+    total_saved = 0
 
-            filtered_nodes = []
-            filtered_nodes.append("""#profile-title: list.txt White List
-#profile-update-interval: 1
-#support-url: https://t.me/twen_two
-#profile-web-page-url: https://github.com
-#announce: t.me/twen_two · WhiteList configs · \n""")
-            for line in all_nodes:
-                if any(word in line for word in WORDS):
-                    filtered_nodes.append(line)
-            
-            result_text = "\n".join(filtered_nodes)
+    for source_url in source_urls:
+        response = requests.get(source_url, timeout=20)
+        raw_data = response.text.strip()
 
-            if is_base64:
-                result_text = base64.b64encode(result_text.encode('utf-8')).decode('utf-8')
-                                                                                                                    
-            with open("list.txt", "w") as f:
-                f.write(result_text)
-                                                                                                                                            
-            print(f"Найдено и сохранено {len(filtered_nodes)} серверов")
+        try:
+            decoded_data = base64.b64decode(raw_data).decode("utf-8")
+            is_base64 = True
+            any_base64 = True
+        except Exception:
+            decoded_data = raw_data
+            is_base64 = False
+
+        all_nodes = [line for line in decoded_data.splitlines() if line.strip()]
+
+        source_matches = 0
+        for line in all_nodes:
+            if any(word in line for word in WORDS):
+                filtered_nodes.append(line)
+                source_matches += 1
+                total_saved += 1
+
+        print(f"Источник {source_url} обработан, найдено {source_matches} подходящих строк")
+
+    result_text = "\n".join(filtered_nodes)
+
+    if any_base64:
+        result_text = base64.b64encode(result_text.encode("utf-8")).decode("utf-8")
+
+    with open("list.txt", "w", encoding="utf-8") as f:
+        f.write(result_text)
+
+    print(f"Найдено и сохранено {total_saved} строк в список")
 except Exception as e:
-        print(f"Что-то пошло не так: {e}")
+    print(f"Что-то пошло не так: {e}")
