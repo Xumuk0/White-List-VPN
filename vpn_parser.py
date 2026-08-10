@@ -27,7 +27,7 @@ try:
     print(f"Используем источники: {source_urls}")
 
     filtered_nodes = [
-        "#profile-title: list.txt White List",
+        "#profile-title: Рецепт-Пирогов.txt White List",
         "#profile-update-interval: 1",
         "#support-url: https://t.me/twen_two",
         "#profile-web-page-url: https://github.com",
@@ -65,7 +65,7 @@ try:
     if any_base64:
         result_text = base64.b64encode(result_text.encode("utf-8")).decode("utf-8")
 
-    with open("list.txt", "w", encoding="utf-8") as f:
+    with open("Рецепт-Пирогов.txt", "w", encoding="utf-8") as f:
         f.write(result_text)
 
     print(f"Найдено и сохранено {total_saved} строк в список")
